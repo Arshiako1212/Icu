@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تبریک و دعوت روز پرستار 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--night:#06201f;--night2:#0d3a38;--gold:#e6c36e;--gold2:#a8802f;--rose:#e0566f;--pink:#ff8fa3;--paper:#fff8f5;--ink:#17393a}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:"Vazirmatn",Tahoma,sans-serif;color:var(--ink);overflow-x:hidden;
+ background:radial-gradient(circle at 15% 10%,#7a1d3f55,transparent 45%),radial-gradient(circle at 90% 85%,#e0566f33,transparent 45%),radial-gradient(ellipse at 50% 20%,var(--night2),var(--night) 70%) fixed}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.stage{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:56px 16px 32px}
+
+/* envelope */
+.env-wrap{position:absolute;text-align:center;transition:opacity 1s,transform 1.2s;cursor:pointer;z-index:2}
+.env{position:relative;width:min(330px,82vw);aspect-ratio:3/2;margin:0 auto;perspective:900px;animation:float 3.5s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(-1deg)}}
+.env .body{position:absolute;inset:0;border-radius:10px;background:linear-gradient(160deg,#ffe9b0,var(--gold) 50%,var(--gold2));box-shadow:0 22px 60px #000a,0 0 90px #ff8fa355}
+.env .body::before,.env .body::after{content:"";position:absolute;inset:0;border-radius:10px;background:linear-gradient(160deg,#ffffff2a,#0003)}
+.env .body::before{clip-path:polygon(0 0,50% 58%,0 100%)}
+.env .body::after{clip-path:polygon(100% 0,50% 58%,100% 100%)}
+.flap{position:absolute;left:0;right:0;top:0;height:62%;background:linear-gradient(180deg,#fff0c4,var(--gold));clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s cubic-bezier(.6,0,.3,1);z-index:3;filter:drop-shadow(0 4px 4px #0004)}
+.seal{position:absolute;left:50%;top:50%;width:68px;height:68px;margin:-34px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffb3c1,var(--rose) 60%,#8f2338);z-index:4;display:grid;place-items:center;color:#fff;font-size:32px;box-shadow:0 6px 18px #0008,0 0 30px #ff6b8b99;animation:beat 1.4s infinite;transition:opacity .4s}
+@keyframes beat{14%{transform:scale(1.16)}28%{transform:scale(1)}42%{transform:scale(1.1)}70%{transform:scale(1)}}
+.hint{margin-top:28px;color:var(--gold);font-family:"Lalezar","Vazirmatn",cursive;font-size:25px;animation:pulse 2s infinite}
+.hint small{display:block;font-family:"Vazirmatn";font-size:14px;color:var(--pink);margin-top:2px}
+@keyframes pulse{50%{opacity:.5}}
+.opened .flap{transform:rotateX(180deg);z-index:0}
+.opened .seal{opacity:0;animation:none}
+.gone{opacity:0;transform:translateY(60px) scale(.8);pointer-events:none}
+
+/* card */
+.card{position:relative;width:100%;max-width:490px;background:var(--paper);border-radius:10px;padding:54px 30px 38px;text-align:center;box-shadow:0 30px 90px #000b,0 0 0 1px var(--gold2),0 0 80px #ff8fa344;opacity:0;transform:translateY(120px) scale(.85);visibility:hidden;transition:opacity 1.2s,transform 1.4s cubic-bezier(.2,.8,.2,1);background-image:radial-gradient(circle at 50% 0,#fff,transparent 55%),radial-gradient(circle at 0 100%,#ffe3e8,transparent 40%),radial-gradient(circle at 100% 100%,#ffe3e8,transparent 40%)}
+.card.show{opacity:1;transform:none;visibility:visible}
+.card::before{content:"";position:absolute;inset:10px;border:1px solid var(--gold2);border-radius:6px;pointer-events:none}
+.card::after{content:"";position:absolute;inset:15px;border:3px double #e6c36e99;border-radius:4px;pointer-events:none}
+.cn{position:absolute;font-style:normal;color:var(--rose);font-size:16px;z-index:1;background:var(--paper);line-height:1;padding:2px}
+.c1{top:7px;right:7px}.c2{top:7px;left:7px}.c3{bottom:7px;right:7px}.c4{bottom:7px;left:7px}
+.badge{width:76px;height:76px;border-radius:50%;margin:-92px auto 8px;background:radial-gradient(circle at 35% 30%,#ffb3c1,var(--rose) 60%,#8f2338);display:grid;place-items:center;color:#fff;font-size:38px;box-shadow:0 0 0 5px var(--paper),0 0 0 7px var(--gold2),0 10px 28px #e0566f77;animation:beat 1.4s infinite;position:relative;z-index:2}
+.ecg{width:80%;height:52px;display:block;margin:0 auto 2px}
+.ecg path{fill:none;stroke:var(--rose);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:500;stroke-dashoffset:500}
+.show .ecg path{animation:draw 2.6s .6s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hrt{color:var(--rose);letter-spacing:9px;font-size:15px;margin:2px 0 4px}
+.hrt b{color:var(--gold2);font-weight:400}
+h1{font-family:"Lalezar","Vazirmatn",cursive;font-weight:400;font-size:44px;line-height:1.45;margin:4px 0 10px;min-height:64px;
+ background:linear-gradient(90deg,var(--night2),#c8324a,var(--night2));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+.msg{font-weight:400;line-height:2.2;font-size:17px;color:#2b4748;margin:0 0 6px;min-height:100px}
+.poem{margin:20px 0;padding:18px 8px;border-top:1px solid #e6c36e99;border-bottom:1px solid #e6c36e99;font-weight:500;font-size:17px;line-height:2.2;color:var(--night2);background:linear-gradient(90deg,transparent,#ffe3e866,transparent)}
+.poem p{margin:0}
+.mid{color:var(--rose);margin:6px 0 8px;font-size:18px}
+.ln{display:block;opacity:0;transform:translateY(8px);transition:opacity 1s,transform 1s}
+.ln.on{opacity:1;transform:none}
+.invite{background:linear-gradient(135deg,var(--night2),var(--night));border-radius:16px;padding:20px 18px;color:#f6ecd0;opacity:0;transform:scale(.94);transition:opacity 1s,transform 1s;box-shadow:0 10px 30px #0005,inset 0 0 0 1px #e6c36e55}
+.invite.on{opacity:1;transform:none}
+.invite h2{font-family:"Lalezar","Vazirmatn",cursive;font-size:28px;color:var(--gold);margin:0 0 10px;font-weight:400}
+.invite h2 i{color:var(--pink);font-style:normal;font-size:18px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 4px;border-top:1px solid #e6c36e44;font-size:18px}
+.row:first-of-type{border-top:0}
+.row span{color:#f1d98c}
+.row b{font-weight:600}
+.foot{font-family:"Lalezar","Vazirmatn",cursive;font-size:25px;color:var(--rose);margin:22px 0 0;opacity:0;transition:opacity 1.4s}
+.foot.on{opacity:1}
+.foot i{font-style:normal;display:inline-block;animation:beat 1.4s infinite}
+.snd{position:fixed;top:max(14px,env(safe-area-inset-top));left:14px;z-index:5;width:46px;height:46px;border-radius:50%;border:1px solid var(--gold2);background:#06201fcc;color:var(--gold);font-size:20px;cursor:pointer;display:none}
+.snd:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.env,.seal,.hint,.badge,.foot i,h1{animation:none}.card,.ln,.invite,.foot{transition:none}h1{color:var(--night2);background:none}}
+</style>
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<button class="snd" id="snd" aria-label="قطع و وصل موسیقی">🔊</button>
+
+<div class="stage">
+  <div class="env-wrap" id="envw" role="button" tabindex="0" aria-label="باز کردن کارت">
+    <div class="env"><div class="body"></div><div class="flap"></div><div class="seal">♥</div></div>
+    <div class="hint">یک نامهٔ عاشقانه برای شما رسیده<small>برای باز کردن لمس کنید ♥</small></div>
+  </div>
+
+  <main class="card" id="card">
+    <i class="cn c1">♥</i><i class="cn c2">♥</i><i class="cn c3">♥</i><i class="cn c4">♥</i>
+    <div class="badge">♥</div>
+    <svg class="ecg" viewBox="0 0 300 56" aria-hidden="true"><path d="M0 30 H90 L104 30 L114 8 L128 50 L140 18 L150 30 H210 C216 22 226 22 232 30 C238 22 248 22 254 30 L232 48 L210 30 M254 30 H300"/></svg>
+    <div class="hrt">♥ <b>✦</b> ♥ <b>✦</b> ♥</div>
+    <h1 data-t="روزتان مبارک، پرستار عزیز"></h1>
+    <p class="msg" data-t="شب‌های بی‌خوابی، دست‌های مهربان و دلی که کنار تخت بیمار می‌تپد، همه دیده می‌شود. ممنون که آرامش را به قلب‌های خسته هدیه می‌دهید."></p>
+
+    <div class="poem">
+      <p><span class="ln">وقتی شب سنگین می‌شود،</span><span class="ln">تو چراغی می‌شوی بی‌صدا؛</span><span class="ln">دستانت دعای بی‌کلام،</span><span class="ln">و لبخندت آغاز شفا.</span></p>
+      <div class="mid ln">♥ ♥ ♥</div>
+      <p><span class="ln">ای مهربانِ بی‌ادعا،</span><span class="ln">که قلب‌ها را از نو می‌سازی،</span><span class="ln">امروز روزِ توست؛</span><span class="ln">بگذار برایت جشنی بگیریم.</span></p>
+    </div>
+
+    <section class="invite" id="inv">
+      <h2><i>♥</i> دعوت به جشن روز پرستار <i>♥</i></h2>
+      <div class="row"><span>📅 روز</span><b>شنبه</b></div>
+      <div class="row"><span>⏰ ساعت</span><b>۱۱ صبح</b></div>
+      <div class="row"><span>📍 مکان</span><b>بخش ICU اوپن هارت</b></div>
+    </section>
+    <p class="foot" id="foot">با عشق، منتظر حضور گرم شما هستیم <i>♥</i></p>
+  </main>
+</div>
+
+<script>
+const $=s=>document.querySelector(s),sleep=ms=>new Promise(r=>setTimeout(r,ms)),rnd=(a,b)=>a+Math.random()*(b-a);
+const still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* floating hearts + bursts */
+const cv=$('#fx'),cx=cv.getContext('2d'),P=[],COL=['#ff6b8b','#e0566f','#ffb3c1','#f4c6d0','#e6c36e'];let W,H;
+const size=()=>{const d=devicePixelRatio||1;W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)};
+addEventListener('resize',size);size();
+const floater=init=>({k:0,x:rnd(0,W),y:init?rnd(0,H):H+30,s:rnd(10,32),v:rnd(.3,.9),a:rnd(0,6),sw:rnd(.5,1.5),c:COL[Math.random()*COL.length|0],o:rnd(.25,.6),t:Math.random()<.82?'♥':'✦'});
+for(let i=0;i<40;i++)P.push(floater(true));
+function burst(x,y,n){if(still)return;for(let i=0;i<n;i++){const an=rnd(0,6.283),sp=rnd(2,7);P.push({k:1,x,y,vx:Math.cos(an)*sp,vy:Math.sin(an)*sp-2,s:rnd(12,30),c:COL[Math.random()*COL.length|0],life:1,t:'♥'})}}
+(function loop(){cx.clearRect(0,0,W,H);
+ for(let i=P.length-1;i>=0;i--){const p=P[i];
+  if(p.k===0){if(!still){p.y-=p.v;p.a+=.02;p.x+=Math.sin(p.a)*p.sw*.6;if(p.y<-40)Object.assign(p,floater(false))}cx.globalAlpha=p.o}
+  else{p.x+=p.vx;p.y+=p.vy;p.vy+=.12;p.vx*=.985;p.life-=.014;if(p.life<=0){P.splice(i,1);continue}cx.globalAlpha=p.life}
+  cx.fillStyle=p.c;cx.font=p.s+'px serif';cx.fillText(p.t,p.x,p.y)}
+ requestAnimationFrame(loop)})();
+addEventListener('pointerdown',e=>burst(e.clientX,e.clientY,9));
+
+/* music: uplifting synth-pop loop that builds (pads+pluck → melody+hats → kick) */
+let ac,master,on=false;
+const mf=n=>440*Math.pow(2,(n-69)/12);
+function music(){
+ ac=new(window.AudioContext||window.webkitAudioContext)();
+ const comp=ac.createDynamicsCompressor();comp.connect(ac.destination);
+ master=ac.createGain();master.gain.value=.55;master.connect(comp);
+ const d=ac.createDelay(),fb=ac.createGain(),wet=ac.createGain();d.delayTime.value=.36;fb.gain.value=.38;wet.gain.value=.4;
+ master.connect(d);d.connect(fb);fb.connect(d);d.connect(wet);wet.connect(comp);
+ const nb=ac.createBuffer(1,ac.sampleRate*.2,ac.sampleRate),nd=nb.getChannelData(0);for(let i=0;i<nd.length;i++)nd[i]=Math.random()*2-1;
+ const env=(g,t,a,dur,v)=>{g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+a);g.gain.exponentialRampToValueAtTime(.0001,t+dur)};
+ const tone=(f,t,dur,v,type,a=.01)=>{const o=ac.createOscillator(),g=ac.createGain();o.type=type;o.frequency.value=f;env(g,t,a,dur,v);o.connect(g);g.connect(master);o.start(t);o.stop(t+dur+.05)};
+ const bell=(f,t,dur,v)=>{tone(f,t,dur,v,'sine');tone(f*2,t,dur*.6,v*.35,'sine');tone(f*3.01,t,dur*.3,v*.12,'sine')};
+ const kick=t=>{const o=ac.createOscillator(),g=ac.createGain();o.frequency.setValueAtTime(130,t);o.frequency.exponentialRampToValueAtTime(42,t+.14);env(g,t,.003,.28,.5);o.connect(g);g.connect(master);o.start(t);o.stop(t+.3)};
+ const hat=(t,v)=>{const s=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();s.buffer=nb;f.type='highpass';f.frequency.value=7000;env(g,t,.001,.06,v);s.connect(f);f.connect(g);g.connect(master);s.start(t);s.stop(t+.1)};
+ const ch=[[60,64,67],[55,59,62],[57,60,64],[53,57,60]],bass=[36,43,45,41],arp=[0,1,2,1,2,1,2,1],DT=.24,
+  mel=[[79,0,76,79,81,79,76,0],[74,0,71,74,79,74,71,0],[76,0,72,76,81,79,76,72],[77,0,81,84,81,79,77,0]];
+ let t=ac.currentTime+.15,s=0;
+ setInterval(()=>{while(t<ac.currentTime+1.2){
+  const bar=Math.floor(s/8)%4,i=s%8,cyc=Math.floor(s/32),c=ch[bar];
+  if(i==0)c.forEach(n=>tone(mf(n),t,DT*8,.05,'sine',.25));
+  tone(mf(c[arp[i]]+12),t,.35,.05,'triangle');
+  if([0,3,4,6].includes(i))tone(mf(bass[bar]),t,.3,.16,'sine',.005);
+  if(cyc>=1){const m=mel[bar][i];if(m)bell(mf(m),t,.9,.11);if(i%2==1)hat(t,.05)}
+  if(cyc>=2){if(i%4==0)kick(t);if(i%4==2)hat(t,.08)}
+  t+=DT;s++}},250);
+ on=true;$('#snd').style.display='block';
+}
+$('#snd').onclick=()=>{on=!on;master.gain.setTargetAtTime(on?.55:0,ac.currentTime,.1);$('#snd').textContent=on?'🔊':'🔇'};
+
+/* typing + reveal */
+async function type(el,sp){const t=el.dataset.t;if(still){el.textContent=t;return}
+ for(const c of Array.from(t)){el.textContent+=c;await sleep(sp)}}
+async function reveal(){
+ await sleep(1300);
+ await type($('h1'),65);
+ await type($('.msg'),28);
+ await sleep(400);
+ for(const l of document.querySelectorAll('.ln')){l.classList.add('on');await sleep(still?0:800)}
+ await sleep(500);$('#inv').classList.add('on');
+ await sleep(1200);$('#foot').classList.add('on');
+}
+let started=false;
+async function open(){
+ if(started)return;started=true;
+ try{music()}catch(e){}
+ $('.env').classList.add('opened');
+ burst(innerWidth/2,innerHeight/2,60);
+ await sleep(still?0:1000);
+ $('#envw').classList.add('gone');
+ $('#card').classList.add('show');
+ burst(innerWidth/2,innerHeight/2,40);
+ reveal();
+}
+$('#envw').onclick=open;
+$('#envw').onkeydown=e=>{if(e.key==='Enter'||e.key===' ')open()};
+</script>
+</body>
+</html>
